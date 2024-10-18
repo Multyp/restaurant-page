@@ -1,0 +1,19 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn {
+    @apply px-6 py-2 rounded-full text-white font-semibold transition duration-300;
+}
+
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700;
+}
+
+.card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+}
