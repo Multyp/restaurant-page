@@ -1,7 +1,7 @@
 export function loadContact() {
     const content = document.getElementById('content');
     content.innerHTML = `
-        <div class="relative py-24 px-8 bg-gradient-to-r from-gray-900 to-gray-800 min-h-screen">
+        <div class="relative py-24 pt-36 px-8 bg-gradient-to-r from-gray-900 to-gray-800 min-h-screen">
             <div class="max-w-screen-xl mx-auto relative z-20">
                 <h1 class="text-4xl font-extrabold bg-gradient-to-br from-white to-blue-400 bg-clip-text text-transparent mb-4 animate-fadeInUp">Contact Us</h1>
                 <p class="text-xl text-gray-300 mb-16 opacity-0 animate-fadeInUp delay-200">We'd love to hear from you</p>

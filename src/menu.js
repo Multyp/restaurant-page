@@ -1,7 +1,7 @@
 export function loadMenu() {
     const content = document.getElementById('content');
     content.innerHTML = `
-        <div class="menu-section bg-gradient-to-r from-gray-900 to-gray-800 min-h-screen pt-24 pb-8 px-8 md:px-4 relative">
+        <div class="menu-section bg-gradient-to-r from-gray-900 to-gray-800 min-h-screen pt-36 pb-8 px-8 md:px-4 relative">
             <div class="menu-content max-w-screen-xl mx-auto relative z-20">
                 <h1 class="menu-title text-5xl font-extrabold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent mb-4 animate-fadeInUp">Our Menu</h1>
                 <p class="menu-subtitle text-xl text-gray-300 mb-16 opacity-0 animate-fadeInUp delay-200">Delicacies from across the Grand Line</p>

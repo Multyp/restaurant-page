@@ -3,8 +3,8 @@ import baratieImage from './assets/baratieonepiece.jpg';
 export function loadHome() {
     const content = document.getElementById('content');
     content.innerHTML = `
-        <div class="relative overflow-hidden py-16 px-8 bg-gradient-to-r from-gray-900 to-gray-800">
-            <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed filter brightness-40" style="background-image: url(${baratieImage}); z-index: 1; filter: brightness(0.5);"></div>
+        <div class="relative overflow-hidden py-16 pt-28 px-8 bg-gradient-to-r from-gray-900 to-gray-800">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-fixed filter brightness-50" style="background-image: url(${baratieImage}); z-index: 1;"></div>
             <div class="relative z-10 max-w-6xl mx-auto pt-8">
                 <h1 class="text-6xl font-extrabold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent mb-6 transform translate-y-5 opacity-0 animate-fadeInUp">Welcome to Baratie</h1>
                 <p class="text-xl text-gray-300 mb-12 transform translate-y-5 opacity-0 animate-fadeInUp delay-200">Experience Grand Line Cuisine like never before</p>
