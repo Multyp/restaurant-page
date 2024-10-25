@@ -1,198 +1,52 @@
 export function loadMenu() {
     const content = document.getElementById('content');
     content.innerHTML = `
-        <style>
-            .menu-section {
-                position: relative;
-                padding: 6rem 2rem;
-                background: linear-gradient(to right, #1a1a1a, #2d3436);
-                min-height: 100vh;
-            }
+        <div class="menu-section bg-gradient-to-r from-gray-900 to-gray-800 min-h-screen pt-24 pb-8 px-8 md:px-4 relative">
+            <div class="menu-content max-w-screen-xl mx-auto relative z-20">
+                <h1 class="menu-title text-5xl font-extrabold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent mb-4 animate-fadeInUp">Our Menu</h1>
+                <p class="menu-subtitle text-xl text-gray-300 mb-16 opacity-0 animate-fadeInUp delay-200">Delicacies from across the Grand Line</p>
 
-            .menu-content {
-                max-width: 1400px;
-                margin: 0 auto;
-                position: relative;
-                z-index: 2;
-            }
-
-            .menu-title {
-                font-size: 4rem;
-                font-weight: 800;
-                background: linear-gradient(135deg, #fff 0%, #64b5f6 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                margin-bottom: 1rem;
-                animation: fadeInUp 0.8s ease forwards;
-            }
-
-            .menu-subtitle {
-                font-size: 1.5rem;
-                color: #e0e0e0;
-                margin-bottom: 4rem;
-                opacity: 0;
-                animation: fadeInUp 0.8s ease forwards 0.2s;
-            }
-
-            .menu-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                gap: 3rem;
-                margin-bottom: 4rem;
-            }
-
-            .menu-card {
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                border-radius: 20px;
-                overflow: hidden;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                opacity: 0;
-                animation: fadeInUp 0.8s ease forwards 0.4s;
-            }
-
-            .menu-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            }
-
-            .menu-card img {
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                transition: transform 0.5s ease;
-            }
-
-            .menu-card:hover img {
-                transform: scale(1.05);
-            }
-
-            .menu-card-content {
-                padding: 2rem;
-            }
-
-            .menu-card h2 {
-                color: #fff;
-                font-size: 1.8rem;
-                font-weight: 600;
-                margin-bottom: 1.5rem;
-            }
-
-            .menu-items {
-                list-style: none;
-            }
-
-            .menu-items li {
-                color: #b0b0b0;
-                padding: 0.8rem 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                transition: color 0.3s ease;
-                display: flex;
-                align-items: center;
-            }
-
-            .menu-items li:last-child {
-                border-bottom: none;
-            }
-
-            .menu-items li::before {
-                content: '•';
-                color: #64b5f6;
-                margin-right: 1rem;
-                font-size: 1.2rem;
-            }
-
-            .menu-items li:hover {
-                color: #fff;
-            }
-
-            .view-menu-btn {
-                background: linear-gradient(135deg, #64b5f6 0%, #3490dc 100%);
-                color: white;
-                padding: 1rem 2.5rem;
-                border-radius: 50px;
-                border: none;
-                font-size: 1.1rem;
-                font-weight: 600;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                opacity: 0;
-                animation: fadeInUp 0.8s ease forwards 0.6s;
-            }
-
-            .view-menu-btn:hover {
-                transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(100, 181, 246, 0.2);
-            }
-
-            @keyframes fadeInUp {
-                from {
-                    transform: translateY(20px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-
-            @media (max-width: 768px) {
-                .menu-section {
-                    padding: 4rem 1rem;
-                }
-
-                .menu-title {
-                    font-size: 2.5rem;
-                }
-
-                .menu-subtitle {
-                    font-size: 1.2rem;
-                }
-
-                .menu-grid {
-                    grid-template-columns: 1fr;
-                    gap: 2rem;
-                }
-
-                .menu-card img {
-                    height: 250px;
-                }
-            }
-        </style>
-
-        <div class="menu-section">
-            <div class="menu-content">
-                <h1 class="menu-title">Our Menu</h1>
-                <p class="menu-subtitle">Delicacies from across the Grand Line</p>
-                
-                <div class="menu-grid">
-                    <div class="menu-card">
-                        <img src="https://images.unsplash.com/photo-1552863474-b5b88c5290fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Appetizers">
-                        <div class="menu-card-content">
-                            <h2>Appetizers</h2>
-                            <ul class="menu-items">
-                                <li>Sea King Carpaccio</li>
-                                <li>Alabasta Spice Balls</li>
-                                <li>Skypeia Cloud Puffs</li>
+                <div class="menu-grid grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                    <div class="menu-card bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl overflow-hidden backdrop-blur-lg opacity-0 animate-fadeInUp delay-400 transition-transform duration-300 ease-out transform hover:translate-y-[-10px] hover:shadow-xl">
+                        <img class="w-full h-72 object-cover transition-transform duration-500 ease-out transform hover:scale-105" src="https://images.unsplash.com/photo-1552863474-b5b88c5290fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Appetizers">
+                        <div class="menu-card-content p-8">
+                            <h2 class="text-white text-2xl font-semibold mb-4">Appetizers</h2>
+                            <ul class="menu-items list-none">
+                                <li class="text-gray-400 py-2 border-b border-white border-opacity-10 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> Sea King Carpaccio
+                                </li>
+                                <li class="text-gray-400 py-2 border-b border-white border-opacity-10 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> Alabasta Spice Balls
+                                </li>
+                                <li class="text-gray-400 py-2 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> Skypeia Cloud Puffs
+                                </li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="menu-card">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Main Courses">
-                        <div class="menu-card-content">
-                            <h2>Main Courses</h2>
-                            <ul class="menu-items">
-                                <li>All Blue Seafood Platter</li>
-                                <li>Drum Island Venison Steak</li>
-                                <li>Vegapunk's Futuristic Fusion Bowl</li>
+                    <div class="menu-card bg-white bg-opacity-5 border border-white border-opacity-10 rounded-2xl overflow-hidden backdrop-blur-lg opacity-0 animate-fadeInUp delay-400 transition-transform duration-300 ease-out transform hover:translate-y-[-10px] hover:shadow-xl">
+                        <img class="w-full h-72 object-cover transition-transform duration-500 ease-out transform hover:scale-105" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Main Courses">
+                        <div class="menu-card-content p-8">
+                            <h2 class="text-white text-2xl font-semibold mb-4">Main Courses</h2>
+                            <ul class="menu-items list-none">
+                                <li class="text-gray-400 py-2 border-b border-white border-opacity-10 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> All Blue Seafood Platter
+                                </li>
+                                <li class="text-gray-400 py-2 border-b border-white border-opacity-10 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> Drum Island Venison Steak
+                                </li>
+                                <li class="text-gray-400 py-2 flex items-center transition-colors duration-300 ease-out hover:text-white">
+                                    <span class="text-blue-400 mr-4 text-lg">•</span> Vegapunk's Futuristic Fusion Bowl
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <button class="view-menu-btn">View Full Menu</button>
+                <button class="view-menu-btn bg-gradient-to-r from-blue-400 to-blue-600 text-white px-10 py-4 rounded-full font-semibold text-lg opacity-0 animate-fadeInUp delay-600 transform hover:translate-y-[-3px] hover:shadow-lg transition-all duration-300 ease-out">
+                    View Full Menu
+                </button>
             </div>
         </div>
     `;

@@ -13,6 +13,21 @@ module.exports = {
       fontFamily: {
         'sans': ['Poppins', 'sans-serif'],
       },
+      keyframes: {
+        fadeInUp: {
+          'from': {
+              transform: 'translateY(20px)',
+              opacity: '0'
+          },
+          'to': {
+              transform: 'translateY(0)',
+              opacity: '1'
+          }
+        }
+      },
+      animation: {
+          fadeInUp: 'fadeInUp 0.8s ease forwards'
+      }
     },
   },
   plugins: [],

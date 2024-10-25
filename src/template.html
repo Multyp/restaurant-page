@@ -5,120 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baratie: Grand Line Cuisine</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: #0f172a;
-            min-height: 100vh;
-            color: #fff;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #fff 0%, #64b5f6 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-btn {
-            background: none;
-            border: none;
-            color: #e0e0e0;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            position: relative;
-        }
-
-        .nav-btn::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: #64b5f6;
-            transition: width 0.3s ease;
-        }
-
-        .nav-btn:hover {
-            color: #fff;
-        }
-
-        .nav-btn:hover::after {
-            width: 80%;
-        }
-
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-                padding: 1rem 0;
-            }
-
-            .nav-buttons {
-                gap: 1rem;
-            }
-
-            .nav-btn {
-                font-size: 0.9rem;
-                padding: 0.4rem 0.8rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">Baratie</div>
-                <div class="nav-buttons">
-                    <button id="home-btn" class="nav-btn">Home</button>
-                    <button id="menu-btn" class="nav-btn">Menu</button>
-                    <button id="contact-btn" class="nav-btn">Contact</button>
+<body class="bg-slate-900 min-h-screen text-white font-poppins">
+    <header class="fixed w-full bg-white/5 backdrop-blur-md border-b border-white/10 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-4 gap-4 sm:gap-0">
+                <div class="text-2xl font-bold bg-gradient-to-br from-white to-blue-400 bg-clip-text text-transparent tracking-wide">
+                    Baratie
+                </div>
+                <div class="flex gap-4 sm:gap-8">
+                    <button id="home-btn" class="nav-button relative px-3 py-2 text-gray-200 hover:text-white transition-colors duration-300">
+                        Home
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-4/5 transition-all duration-300"></span>
+                    </button>
+                    <button id="menu-btn" class="nav-button relative px-3 py-2 text-gray-200 hover:text-white transition-colors duration-300">
+                        Menu
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-4/5 transition-all duration-300"></span>
+                    </button>
+                    <button id="contact-btn" class="nav-button relative px-3 py-2 text-gray-200 hover:text-white transition-colors duration-300">
+                        Contact
+                        <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-blue-400 group-hover:w-4/5 transition-all duration-300"></span>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
-    <div id="content"></div>
+    <div id="content" class="pt-10"></div>
 </body>
 </html>
